@@ -48,20 +48,29 @@
             bindings = <&kp>, <&kp>;
         };
 
-        cw: CapsWord {
-            compatible = "zmk,behavior-caps-word";
-            label = "CapsWord";
-            #binding-cells = <0>;
-            continue-list = <BACKSPACE UNDERSCORE DELETE ENTER SPACE>;
-        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        CapsWord {
-            bindings = <&caps_word>;
+        combo_enter {
+            bindings = <&kp ENTER>;
             key-positions = <13 16>;
+        };
+
+        combo_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 17>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 18>;
+        };
+
+        combo_sym {
+            bindings = <&sl 3>;
+            key-positions = <33 36>;
         };
     };
 
@@ -74,7 +83,7 @@
                &kp NB_X           &kp NB_H       &kp NB_F        &kp NB_A_RING    &kp NB_O_SLASH    &kp NB_B     &kp NB_P        &kp NB_M        &kp NB_L       &kp NB_Z
                &hm LEFT_WIN NB_I  &hm LALT NB_O  &hm LCTRL NB_E  &hm LSHIFT NB_A  &kp NB_DOT        &kp NB_G     &hm RSHFT NB_T  &hm RCTRL NB_S  &hm RALT NB_R  &hm RIGHT_WIN NB_N
 &kp NB_A_RING  &kp NB_J           &kp NB_K       &kp NB_Y        &kp NB_U         &kp NB_COMMA      &kp NB_V     &kp NB_D        &kp NB_C        &kp NB_W       &kp NB_Q              &kp NB_AE
-                                                 &lt 5 ESC       &lt 1 TAB        &lt 4 SPACE       &sk LSHFT    &lt 2 BSPC      &kp DELETE
+                                                 &sl 2           &kp SPACE        &mo 1             &kp TAB      &kp BSPC        &sk LSHFT
             >;
         };
 

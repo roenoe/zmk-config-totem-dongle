@@ -30,7 +30,10 @@ Flash: double-tap reset to enter bootloader, then `cp build/dongle/zephyr/zmk.uf
 
 The `studio-rpc-usb-uart` snippet does NOT exist in this ZMK version — configured manually via `config/totem_dongle.conf` and `config/totem_dongle.overlay`. Dongle shows up as `/dev/ttyACM0`. User is in `uucp` group for access. Restart ZMK Studio after flashing new firmware before connecting.
 
-Limitations: `&sk` (OSM/sticky key) bindings cannot be set via ZMK Studio UI — must be hardcoded in the keymap.
+Limitations:
+- `&sk` (OSM/sticky key) bindings cannot be set via ZMK Studio UI — must be hardcoded in the keymap.
+- Combos cannot be created or edited in ZMK Studio — must be defined in the keymap file.
+- ZMK Studio overrides compiled key bindings at runtime (stored in NVS), but behaviors and combos are always sourced from the compiled firmware.
 
 ## Re-pairing procedure
 
@@ -49,6 +52,32 @@ I O E A .   G T S R N
 J K Y U ,   V D C W Q
 ```
 
-- Left thumb: `ESC(layer5)`, `TAB(layer1)`, `SPACE(layer4)`
-- Right thumb: `OSM LSHFT (&sk LSHFT)`, `BSPC(layer2)`, `DELETE`
+- Left thumb (L→R): `&sl 2` (sticky Num), `SPACE`, `&mo 1` (momentary NNav)
+- Right thumb (L→R): `TAB`, `BSPC`, `&sk LSHFT` (one-shot shift)
 - Outer row 3 keys: Å (left), Æ (right)
+
+## Key positions
+
+Used for combo definitions. Positions follow reading order across each row.
+
+```
+ 0   1   2   3   4       5   6   7   8   9      ← top row
+10  11  12  13  14      15  16  17  18  19      ← home row
+20  21  22  23  24  25  26  27  28  29  30  31  ← bottom row (20=Å outer, 31=Æ outer)
+                32  33  34  35  36  37          ← thumbs
+```
+
+## Combos
+
+All combos use home row or thumb keys:
+
+| Keys | Positions | Output |
+|------|-----------|--------|
+| A + T (index fingers) | 13 + 16 | Enter |
+| E + S (middle fingers) | 12 + 17 | Escape |
+| O + R (ring fingers) | 11 + 18 | Tab |
+| SPACE + BSPC (thumbs) | 33 + 36 | Sticky Sym layer (`&sl 3`) |
+
+## Planned work
+
+- Map all layers fully in `totem.keymap` so they match ZMK Studio, avoiding the need to re-apply every key manually after a firmware flash.
