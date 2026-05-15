@@ -59,7 +59,7 @@ Custom Norwegian layout designed with cyanophage's analyzer tool. Homerow mods o
 - Left outer bottom key `⌨` (position 20): hold=LCTRL, tap=ESC (`&hm LCTRL ESCAPE`)
 - Right outer bottom key (position 31): Q (no special behavior)
 - Left thumb (L→R): `&sl 2` (sticky Num), `SPACE`, `&mo 1` (momentary Nav)
-- Right thumb (L→R): `TAB`, `BSPC`, `&sk LSHFT` (one-shot shift)
+- Right thumb (L→R): `&sk LSHFT` (one-shot shift), `BSPC`, `ENTER`
 
 ### Homerow mod assignments
 

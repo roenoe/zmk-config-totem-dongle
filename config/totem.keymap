@@ -99,7 +99,7 @@
                &kp NB_X           &kp NB_W       &kp NB_F        &kp NB_P         &kp NB_Z          &kp NB_Y     &kp NB_A_RING   &kp NB_O        &kp NB_U       &kp NB_AE
                &hm LEFT_WIN NB_L  &hm LALT NB_R  &hm LCTRL NB_S  &hm LSHIFT NB_T  &kp NB_G          &kp NB_B     &hm RSHFT NB_N  &hm RCTRL NB_E  &hm LALT NB_I  &hm LEFT_WIN NB_A
 &hm LCTRL ESCAPE  &kp NB_K        &kp NB_M       &kp NB_C        &kp NB_D         &kp NB_V          &kp NB_J     &kp NB_H        &kp NB_COMMA    &kp NB_DOT     &kp NB_O_SLASH        &kp NB_Q
-                                                 &sl 2           &kp SPACE        &mo 1             &kp TAB      &kp BSPC        &sk LSHFT
+                                                 &sl 2           &kp SPACE        &mo 1             &sk LSHFT    &kp BSPC        &kp ENTER
             >;
         };
 
