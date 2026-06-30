@@ -48,24 +48,24 @@ When bonding needs to be reset (e.g. after flashing all new firmware):
 
 ## Keymap
 
-Custom Norwegian layout designed with cyanophage's analyzer tool. Homerow mods on home row (WIN/ALT/CTRL/SHIFT). Right-hand vowels.
+Custom Norwegian layout designed with cyanophage's analyzer tool. Homerow mods on home row (WIN/ALT/CTRL/SHIFT).
 
 ```
- X  W  F  P  Z      Y  Å  O  U  Æ
- L  R  S  T  G      B  N  E  I  A
-⌨  K  M  C  D  V   J  H  ,  .  Ø  Q
+ C  Y  O  U  Z      X  K  M  F  B
+ D  I  E  A  Ø      J  L  T  S  N
+⌨  P  .  ,  Å  Æ   Q  H  G  V  W  ↵
 ```
 
 - Left outer bottom key `⌨` (position 20): hold=LCTRL, tap=ESC (`&hm LCTRL ESCAPE`)
-- Right outer bottom key (position 31): Q (no special behavior)
+- Right outer bottom key (position 31): ENTER
 - Left thumb (L→R): `&sl 2` (sticky Num), `SPACE`, `&mo 1` (momentary Nav)
-- Right thumb (L→R): `&sk LSHFT` (one-shot shift), `BSPC`, `ENTER`
+- Right thumb (L→R): `&sk LSHFT` (one-shot shift), `&lt 2 NB_R` (hold=Num layer, tap=R), `ENTER`
 
 ### Homerow mod assignments
 
-Left hand: L=LWIN, R=LALT, S=LCTRL, T=LSHIFT
+Left hand: D=LWIN, I=LALT, E=LCTRL, A=LSHIFT
 
-Right hand: N=RSHIFT, E=RCTRL, I=**LALT** (not RALT — only LALT works with user's OS shortcuts), A=**LWIN** (not RWIN)
+Right hand: L=RSHIFT, T=RCTRL, S=**LALT** (not RALT — only LALT works with user's OS shortcuts), N=**LWIN** (not RWIN)
 
 ### Dead key macros
 
@@ -91,10 +91,8 @@ All combos use home row or thumb keys:
 
 | Keys | Positions | Output |
 |------|-----------|--------|
-| T + N (index fingers) | 13 + 16 | Enter |
-| S + E (middle fingers) | 12 + 17 | Escape |
-| R + I (ring fingers) | 11 + 18 | Tab |
-| SPACE + BSPC (thumbs) | 33 + 36 | Sticky Sym layer (`&sl 3`) |
+| . + , (bottom row) | 22 + 23 | Tab |
+| SPACE + Num/R (thumbs) | 33 + 36 | Sticky Sym layer (`&sl 3`) |
 
 ## Layer structure
 

@@ -69,19 +69,9 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <13 16>;
-        };
-
-        combo_escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <12 17>;
-        };
-
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <11 18>;
+            key-positions = <22 23>;
         };
 
         combo_sym {
@@ -96,10 +86,10 @@
         Base {
             label = "Base";
             bindings = <
-               &kp NB_X           &kp NB_W       &kp NB_F        &kp NB_P         &kp NB_Z          &kp NB_Y     &kp NB_A_RING   &kp NB_O        &kp NB_U       &kp NB_AE
-               &hm LEFT_WIN NB_L  &hm LALT NB_R  &hm LCTRL NB_S  &hm LSHIFT NB_T  &kp NB_G          &kp NB_B     &hm RSHFT NB_N  &hm RCTRL NB_E  &hm LALT NB_I  &hm LEFT_WIN NB_A
-&hm LCTRL ESCAPE  &kp NB_K        &kp NB_M       &kp NB_C        &kp NB_D         &kp NB_V          &kp NB_J     &kp NB_H        &kp NB_COMMA    &kp NB_DOT     &kp NB_O_SLASH        &kp NB_Q
-                                                 &sl 2           &kp SPACE        &mo 1             &sk LSHFT    &kp BSPC        &kp ENTER
+               &kp NB_C            &kp NB_Y       &kp NB_O        &kp NB_U          &kp NB_Z          &kp NB_X     &kp NB_K        &kp NB_M        &kp NB_F       &kp NB_B
+               &hm LEFT_WIN NB_D   &hm LALT NB_I  &hm LCTRL NB_E  &hm LSHIFT NB_A   &kp NB_O_SLASH    &kp NB_J     &hm RSHFT NB_L  &hm RCTRL NB_T  &hm LALT NB_S  &hm LEFT_WIN NB_N
+&hm LCTRL ESCAPE  &kp NB_P         &kp NB_DOT     &kp NB_COMMA    &kp NB_A_RING     &kp NB_AE         &kp NB_Q     &kp NB_H        &kp NB_G        &kp NB_V       &kp NB_W              &kp ENTER
+                                                  &sl 2           &kp SPACE         &mo 1             &sk LSHFT    &lt 2 NB_R      &kp ENTER
             >;
         };
 
